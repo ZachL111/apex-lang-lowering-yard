@@ -1,0 +1,73 @@
+{
+  "repo": "apex-lang-lowering-yard",
+  "language": "Julia",
+  "category": "Compilers",
+  "goal": "Create a Julia reference implementation for lowering workflows, centered on incremental indexing, append-only fixtures, and checkpoint recovery checks.",
+  "review_model": {
+    "terms": [
+      "IR pressure",
+      "lowering drift",
+      "stack depth",
+      "diagnostic reach"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "IR pressure",
+      "signal": 56,
+      "slack": 54,
+      "drag": 26,
+      "confidence": 49,
+      "score": 137,
+      "lane": "watch"
+    },
+    {
+      "name": "stress",
+      "focus": "lowering drift",
+      "signal": 50,
+      "slack": 37,
+      "drag": 17,
+      "confidence": 46,
+      "score": 132,
+      "lane": "watch"
+    },
+    {
+      "name": "edge",
+      "focus": "stack depth",
+      "signal": 46,
+      "slack": 36,
+      "drag": 20,
+      "confidence": 57,
+      "score": 125,
+      "lane": "watch"
+    },
+    {
+      "name": "recovery",
+      "focus": "diagnostic reach",
+      "signal": 64,
+      "slack": 27,
+      "drag": 25,
+      "confidence": 85,
+      "score": 165,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "IR pressure",
+      "signal": 89,
+      "slack": 27,
+      "drag": 26,
+      "confidence": 80,
+      "score": 207,
+      "lane": "ship"
+    }
+  ]
+}
