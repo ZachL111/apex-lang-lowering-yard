@@ -1,0 +1,17 @@
+{
+  "repo": "apex-lang-lowering-yard",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 5,
+    "ship": 184,
+    "watch": 116
+  },
+  "terms": [
+    "IR pressure",
+    "lowering drift",
+    "stack depth",
+    "diagnostic reach"
+  ]
+}
